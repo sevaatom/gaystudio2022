@@ -1,0 +1,40 @@
+﻿<Window x:Class="tele.MainWindow"
+        
+        xmlns:local="clr-namespace:tele"
+        mc:Ignorable="d"
+        Icon="image.ico"
+        Title="Телеком Нева Связь" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid>
+
+
+        <TextBlock  Height="40" Width="400" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="50,40,350,330" FontWeight="DemiBold"  Text="Телеком Нева Связь" FontSize="30px" TextAlignment="Left"></TextBlock>
+       
+        <Image Source="logo.jpg" Height="150" Width="150" HorizontalAlignment="Right" VerticalAlignment="Top"></Image>
+        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="200 130 200 20">
+
+            <StackPanel Orientation="Horizontal" Margin="20 20 20 0">
+
+                <TextBlock Width="80" Height="25" FontWeight="DemiBold" Margin="10 3 10 5" FontSize="20px" TextAlignment="Left" Text="Номер"></TextBlock>
+                <TextBox  x:Name="textBox1" TextChanged="TextBox_TextChanged" TextAlignment="Left" MaxLength="11" FontSize="20px" Width="200" Height="30" Margin="20 0 30 0"></TextBox>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="20 10 20 0">
+                <TextBlock Width="80" Height="25"  Margin="10 3 10 5" FontWeight="DemiBold" FontSize="20px" TextAlignment="Left" Text="Пароль"></TextBlock>
+                <TextBox x:Name="textBox2"  IsReadOnly="True" TextChanged="TextBox_TextChanged_1"  TextAlignment="Left" MaxLength="8" FontSize="20px"  Width="200"  Height="30" Margin="20 0 30 0"></TextBox>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="20 10 20 0">
+                <TextBlock Width="80" Height="25" Margin="10 3 10 5" FontSize="20px" FontWeight="DemiBold" TextAlignment="Left" Text="Код"></TextBlock>
+                <TextBox x:Name="textBox3" IsReadOnly="True" TextChanged="TextBox_TextChanged_2"  TextAlignment="Left" MaxLength="8" FontSize="20px" Width="140" Height="30" Margin="20 0 20 0"></TextBox>
+                <Image x:Name="load_image" IsEnabled="False" Source="load.jpg" MouseDown="Image_MouseDown" Height="40" Width="40" Margin="0 0 5 0"></Image>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="30 60 30 5">
+                <Button x:Name="button1" Click="Button_Click_1" FontWeight="DemiBold" Width="120" Height="30" Margin="30 5 30 5"  FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Отмена" ></Button>
+                <Button x:Name="button2" Click="Button_Click_2" IsEnabled="False" FontWeight="DemiBold" Width="120"  Height="30" Margin="20 5 40 5"  FontSize="20px" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Вход"></Button>
+            </StackPanel>
+        </StackPanel>
+
+         </Grid>
+</Window>
